@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\controllers">
+      <UniqueIdentifier>{ce1df223-e17c-4f4e-9a43-dca4116125f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controllers">
+      <UniqueIdentifier>{0ffe64f4-05b9-41f9-8af3-0b5f5e4de31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\templates">
+      <UniqueIdentifier>{26cf6da5-6f4e-44ba-822c-57a2fd2b2878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets">
+      <UniqueIdentifier>{8dedf200-0e89-423d-9756-0756eb39da6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets">
+      <UniqueIdentifier>{8bad83e6-917d-446f-9a6c-c4cf423fdc21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\templates">
+      <UniqueIdentifier>{1c401eae-ddc7-4335-98cd-defc95cd7c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\player">
+      <UniqueIdentifier>{94efbb8c-88f4-4455-a669-3d525bf16b69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets\player">
+      <UniqueIdentifier>{8e95ddef-43f9-4397-88bb-4143454fdc6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\data">
+      <UniqueIdentifier>{f91819e7-74c6-4818-ad04-05100b32d9c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utility">
+      <UniqueIdentifier>{112fd547-02cd-4951-bcc9-75232519fe70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{254e7171-9b0d-46fd-8906-0e9d6600c1d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\data\pod">
+      <UniqueIdentifier>{d12a792f-4e70-4c2a-a7f6-f3fb0d80de4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\data\enums">
+      <UniqueIdentifier>{07f7391a-d95e-4283-9e19-5372dd83f33a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\services">
+      <UniqueIdentifier>{3786530b-062d-4078-856d-45f2e670a99c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\services">
+      <UniqueIdentifier>{a6d73a7a-87ba-4fc2-9eec-a90a71e70d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\enemies">
+      <UniqueIdentifier>{cce22f3d-2d3b-47e2-82b3-28400a2aba2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets\enemies">
+      <UniqueIdentifier>{c53d3eff-d456-4b2a-b515-ee2f365aec03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\services\ui">
+      <UniqueIdentifier>{4ebdb152-a5e3-4bf0-a5a7-6b290b0b76dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\services\ui">
+      <UniqueIdentifier>{9340fff0-e0c7-417a-91cc-2aad8cb3a6d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\dots">
+      <UniqueIdentifier>{3235616e-2111-4866-a117-5f73a5e1cbb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets\dots">
+      <UniqueIdentifier>{cedfa22f-85db-4b90-b916-3918d034791a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\weapons">
+      <UniqueIdentifier>{ff356676-af80-470e-9cfd-21a9a0aaed74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets\weapons">
+      <UniqueIdentifier>{dae99751-cf69-4f92-986c-54975036487a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\spells">
+      <UniqueIdentifier>{22e16424-0421-4e99-9702-dfefe0f20758}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets\spells">
+      <UniqueIdentifier>{ac111005-e502-45e6-b14a-89a17b6cdc94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\services\other">
+      <UniqueIdentifier>{d3de3281-9d07-4d95-88d9-7e094085c189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\services\other">
+      <UniqueIdentifier>{2e2691d8-19aa-4c69-9966-f545d0381fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\consumables">
+      <UniqueIdentifier>{41ed9a9f-de84-4995-9c5a-6b7b7728200c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\presets\consumables">
+      <UniqueIdentifier>{3f2124fe-4a7f-4bb3-8b6b-41f8cf43fc68}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game_controller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files\presets\player</Filter>
+    </ClCompile>
+    <ClCompile Include="battle_controller.cpp">
+      <Filter>Source Files\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="math_utils.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="goblin.cpp">
+      <Filter>Source Files\presets\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="battle_ui.cpp">
+      <Filter>Source Files\services\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_utils.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="effect.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="dot.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="poisoning.cpp">
+      <Filter>Source Files\presets\dots</Filter>
+    </ClCompile>
+    <ClCompile Include="command_executor.cpp">
+      <Filter>Source Files\services\other</Filter>
+    </ClCompile>
+    <ClCompile Include="item.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="weapon.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="sword.cpp">
+      <Filter>Source Files\presets\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="spell.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="fireball.cpp">
+      <Filter>Source Files\presets\spells</Filter>
+    </ClCompile>
+    <ClCompile Include="burning.cpp">
+      <Filter>Source Files\presets\dots</Filter>
+    </ClCompile>
+    <ClCompile Include="consumable.cpp">
+      <Filter>Source Files\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="stamina_potion.cpp">
+      <Filter>Source Files\presets\consumables</Filter>
+    </ClCompile>
+    <ClCompile Include="lifesteal.cpp">
+      <Filter>Source Files\presets\spells</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game_controller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Header Files\presets\player</Filter>
+    </ClInclude>
+    <ClInclude Include="defense_profile.h">
+      <Filter>Header Files\data\pod</Filter>
+    </ClInclude>
+    <ClInclude Include="damage_type.h">
+      <Filter>Header Files\data\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="battle_controller.h">
+      <Filter>Header Files\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="math_utils.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="goblin.h">
+      <Filter>Header Files\presets\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="battle_ui.h">
+      <Filter>Header Files\services\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_utils.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="effect.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="dot.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="poisoning.h">
+      <Filter>Header Files\presets\dots</Filter>
+    </ClInclude>
+    <ClInclude Include="take_damage_result.h">
+      <Filter>Header Files\data\pod</Filter>
+    </ClInclude>
+    <ClInclude Include="command_executor.h">
+      <Filter>Header Files\services\other</Filter>
+    </ClInclude>
+    <ClInclude Include="item.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="weapon.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="sword.h">
+      <Filter>Header Files\presets\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="command_type.h">
+      <Filter>Header Files\data\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="item_type.h">
+      <Filter>Header Files\data\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="spell.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="fireball.h">
+      <Filter>Header Files\presets\spells</Filter>
+    </ClInclude>
+    <ClInclude Include="burning.h">
+      <Filter>Header Files\presets\dots</Filter>
+    </ClInclude>
+    <ClInclude Include="consumable.h">
+      <Filter>Header Files\templates</Filter>
+    </ClInclude>
+    <ClInclude Include="stamina_potion.h">
+      <Filter>Header Files\presets\consumables</Filter>
+    </ClInclude>
+    <ClInclude Include="lifesteal.h">
+      <Filter>Header Files\presets\spells</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

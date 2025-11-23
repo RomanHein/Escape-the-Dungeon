@@ -296,5 +296,8 @@
     <ClInclude Include="main_ui_service.h">
       <Filter>Header Files\services\ui</Filter>
     </ClInclude>
+    <ClInclude Include="hit_info.h">
+      <Filter>Header Files\data\pod</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

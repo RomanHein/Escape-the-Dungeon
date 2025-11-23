@@ -14,7 +14,7 @@ namespace items {
 	{
 		std::vector<std::string> events = { user.getName() + " greift " + target.getName() + " an..." };
 
-		for (int i = 0; i < utils::math::randomInt(1, 3); i++)
+		for (int i = 0; i < core::utils::math::randomInt(1, 3); i++)
 		{
 			this->dealDamage(user, target, events);
 		}

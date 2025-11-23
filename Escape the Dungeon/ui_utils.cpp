@@ -6,7 +6,9 @@
 #include <sstream>
 #include <limits>
 
+//
 // === Namespace Functions ===
+//
 
 namespace utils
 {

@@ -34,12 +34,24 @@ namespace core
 
 		void main_ui::showDefeatScreen()
 		{
-			std::cout << "Du wurdest vom Gegner besiegt...";
+			utils::ui::clear();
+
+			std::cout << "Mit all deiner Kraft hast du gekämpft, aber es reichte nicht.\n";
+			std::cout << "Du wurdest vom Gegner hingerichtet. Du hast tapfer gekämpft.\n";
+			std::cout << "Game Over.\n\n";
+
+			utils::ui::wait();
 		}
 
 		void main_ui::showVictoryScreen()
 		{
-			std::cout << "Du hast es geschafft!";
+			utils::ui::clear();
+
+			std::cout << "Du ziehst dein Schwert aus dem Körper des Gegners. Du hast es geschafft...\n";
+			std::cout << "Mit allen Kräften ist es dir gelungen als einziger zurück an die Oberfläche anzukommen...\n";
+			std::cout << "Victory.\n\n";
+
+			utils::ui::wait();
 		}
 	}
 }

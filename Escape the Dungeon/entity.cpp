@@ -35,7 +35,7 @@ TakeDamageResult Entity::takeDamage(DamageType damageType, double damage, bool d
 {
 	double multiplier = 1.0;
 
-	if (dodgeable && utils::math::randomInt(1, 100) / 100.0 <= this->dodgeChance_)
+	if (dodgeable && core::utils::math::randomUnit() < this->dodgeChance_)
 	{
 		return { 0.0, 0.0, true };
 	}

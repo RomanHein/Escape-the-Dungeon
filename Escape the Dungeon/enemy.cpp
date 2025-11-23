@@ -11,7 +11,7 @@
 
 std::unique_ptr<Enemy> Enemy::createRandom()
 {
-	switch (utils::math::randomInt(1, 3))
+	switch (core::utils::math::randomInt(1, 3))
 	{
 	case 1:
 		return std::make_unique<Goblin>();

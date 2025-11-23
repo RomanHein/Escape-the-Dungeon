@@ -42,7 +42,7 @@ std::vector<std::string> Demon::makeTurn(Player& player)
 {
 	Item* fireball = this->getItem("feuerball");
 
-	if (this->getStamina() / this->getMaxStamina() <= 0.5 && this->hasItem("kristall"))
+	if (static_cast<double>(this->getStamina()) / this->getMaxStamina() < 0.5 && this->hasItem("kristall"))
 	{
 		Item* crystal = this->getItem("kristall");
 

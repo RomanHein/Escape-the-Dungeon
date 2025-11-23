@@ -26,6 +26,7 @@ Entity::Entity(
 	defenseProfiles_(defenseProfile),
 	inventory_(std::move(inventory))
 { }
+
 Entity::~Entity() = default;
 
 // === Public Methods ===

@@ -2,7 +2,7 @@
 
 int main()
 {
-	GameController game;
+	core::controllers::GameController game;
 	game.init();
 	game.start();
 }

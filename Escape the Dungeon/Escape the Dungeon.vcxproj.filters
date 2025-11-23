@@ -40,12 +40,6 @@
     <Filter Include="Header Files\data">
       <UniqueIdentifier>{f91819e7-74c6-4818-ad04-05100b32d9c8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\utility">
-      <UniqueIdentifier>{112fd547-02cd-4951-bcc9-75232519fe70}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\utility">
-      <UniqueIdentifier>{254e7171-9b0d-46fd-8906-0e9d6600c1d7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\data\pod">
       <UniqueIdentifier>{d12a792f-4e70-4c2a-a7f6-f3fb0d80de4c}</UniqueIdentifier>
     </Filter>
@@ -100,6 +94,12 @@
     <Filter Include="Source Files\presets\consumables">
       <UniqueIdentifier>{3f2124fe-4a7f-4bb3-8b6b-41f8cf43fc68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\utility">
+      <UniqueIdentifier>{112fd547-02cd-4951-bcc9-75232519fe70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utility">
+      <UniqueIdentifier>{254e7171-9b0d-46fd-8906-0e9d6600c1d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -126,7 +126,7 @@
     <ClCompile Include="goblin.cpp">
       <Filter>Source Files\presets\enemies</Filter>
     </ClCompile>
-    <ClCompile Include="battle_ui.cpp">
+    <ClCompile Include="battle_ui_service.cpp">
       <Filter>Source Files\services\ui</Filter>
     </ClCompile>
     <ClCompile Include="ui_utils.cpp">
@@ -189,7 +189,7 @@
     <ClCompile Include="golem.cpp">
       <Filter>Source Files\presets\enemies</Filter>
     </ClCompile>
-    <ClCompile Include="main_menu_ui_service.cpp">
+    <ClCompile Include="main_ui_service.cpp">
       <Filter>Source Files\services\ui</Filter>
     </ClCompile>
   </ItemGroup>
@@ -221,7 +221,7 @@
     <ClInclude Include="goblin.h">
       <Filter>Header Files\presets\enemies</Filter>
     </ClInclude>
-    <ClInclude Include="battle_ui.h">
+    <ClInclude Include="battle_ui_service.h">
       <Filter>Header Files\services\ui</Filter>
     </ClInclude>
     <ClInclude Include="ui_utils.h">
@@ -293,7 +293,7 @@
     <ClInclude Include="golem.h">
       <Filter>Header Files\presets\enemies</Filter>
     </ClInclude>
-    <ClInclude Include="main_menu_ui_service.h">
+    <ClInclude Include="main_ui_service.h">
       <Filter>Header Files\services\ui</Filter>
     </ClInclude>
   </ItemGroup>

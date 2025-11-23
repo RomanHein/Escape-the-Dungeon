@@ -124,7 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bandage.cpp" />
-    <ClCompile Include="battle_ui.cpp" />
+    <ClCompile Include="battle_ui_service.cpp" />
     <ClCompile Include="battle_controller.cpp" />
     <ClCompile Include="burning.cpp" />
     <ClCompile Include="consumable.cpp" />
@@ -142,7 +142,7 @@
     <ClCompile Include="item.cpp" />
     <ClCompile Include="lifesteal.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="main_menu_ui_service.cpp" />
+    <ClCompile Include="main_ui_service.cpp" />
     <ClCompile Include="math_utils.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="command_executor.cpp" />
@@ -156,7 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bandage.h" />
-    <ClInclude Include="battle_ui.h" />
+    <ClInclude Include="battle_ui_service.h" />
     <ClInclude Include="battle_controller.h" />
     <ClInclude Include="burning.h" />
     <ClInclude Include="command_type.h" />
@@ -177,7 +177,7 @@
     <ClInclude Include="item.h" />
     <ClInclude Include="item_type.h" />
     <ClInclude Include="lifesteal.h" />
-    <ClInclude Include="main_menu_ui_service.h" />
+    <ClInclude Include="main_ui_service.h" />
     <ClInclude Include="math_utils.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="command_executor.h" />

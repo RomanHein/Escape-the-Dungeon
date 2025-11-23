@@ -1,18 +1,29 @@
+// game_controller.h
+//
+// First controller which controlls all other controllers. 
+// The very basic game logic is controlled here (starting fights, etc.).
+
 #pragma once
 
 #include "player.h"
 #include "battle_controller.h"
 
-class GameController
+namespace core
 {
-private:
-	Player player_;
-	BattleController battleController_;
+	namespace controllers
+	{
+		class GameController
+		{
+		private:
+			Player player_;
+			core::controllers::BattleController battleController_;
 
-public:
-	explicit GameController();
+		public:
+			explicit GameController();
 
-	void init();
-	void start();
-};
+			void init();
+			void start();
+		};
+	}
+}
 

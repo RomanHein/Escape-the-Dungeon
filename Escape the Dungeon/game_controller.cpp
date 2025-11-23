@@ -4,37 +4,45 @@
 #include <cstdlib>
 #include <ctime>
 
-#include "main_menu_ui_service.h"
+#include "main_ui_service.h"
 
-//
-// === Constructor & Destructor ===
-//
-
-GameController::GameController() :
-	battleController_(this->player_)
-{ }
-
-//
-// === Public Methods ===
-//
-
-void GameController::init()
+namespace core
 {
-	std::srand(static_cast<unsigned int>(std::time(0)));
-	std::locale::global(std::locale("DE_de"));
-}
-void GameController::start()
-{
-	services::main_menu_ui::showGameIntro();
-
-	for (int i = 0; i < 3; i++)
+	namespace controllers
 	{
-		bool hasWon = this->battleController_.startBattle();
+		//
+		// === Constructor & Destructor ===
+		//
 
-		if (!hasWon)
+		GameController::GameController() :
+			battleController_(this->player_)
+		{}
+
+		//
+		// === Public Methods ===
+		//
+
+		void GameController::init()
 		{
-			std::cout << "hast verloren :(";
-			break;
+			std::srand(static_cast<unsigned int>(std::time(0)));
+			std::locale::global(std::locale("DE_de"));
+		}
+		void GameController::start()
+		{
+			core::services::main_ui::showGameIntro();
+
+			for (int i = 0; i < 3; i++)
+			{
+				bool hasWon = this->battleController_.startBattle();
+
+				if (!hasWon)
+				{
+					core::services::main_ui::showDefeatScreen();
+					return;
+				}
+			}
+
+			core::services::main_ui::showVictoryScreen();
 		}
 	}
 }

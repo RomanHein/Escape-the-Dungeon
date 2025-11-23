@@ -16,7 +16,7 @@ private:
 protected:
 	//
 	// === Protected Methods ===
-	//s
+	//
 
 	// Deals basic damage to a target, creates a damage event.
 	double dealDamage(Entity& user, Entity& target, std::vector<std::string>& events);

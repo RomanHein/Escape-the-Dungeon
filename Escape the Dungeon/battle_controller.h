@@ -1,3 +1,7 @@
+// battle_controller.h
+//
+// Manages battles, used to start fights.
+
 #pragma once
 
 #include <memory>
@@ -7,20 +11,26 @@
 class Player;
 class Enemy;
 
-class BattleController
+namespace core
 {
-private:
-	Player& player_;
-	std::unique_ptr<Enemy> enemy_;
-	int turn_;
+	namespace controllers
+	{
+		class BattleController
+		{
+		private:
+			Player& player_;
+			std::unique_ptr<Enemy> enemy_;
+			int turn_;
 
-	// Asks player to make a turn.
-	std::vector<std::string> handlePlayerTurn();
+			// Asks player to make a turn.
+			std::vector<std::string> handlePlayerTurn();
 
-public:
-	explicit BattleController(Player& player);
-	~BattleController();
+		public:
+			explicit BattleController(Player& player);
+			~BattleController();
 
-	bool startBattle();
-};
+			bool startBattle();
+		};
+	}
+}
 

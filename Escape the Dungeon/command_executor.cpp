@@ -240,51 +240,55 @@ std::vector<std::string> handleConsume(const std::vector<std::string>& tokens, P
 // === Namespace Functions ===
 //
 
-namespace services {
-	std::vector<std::string> command_executor::getCommandLine()
+namespace core
+{
+	namespace services
 	{
-		std::vector<std::string> tokens;
-		std::string input;
-
-		while (true)
+		std::vector<std::string> command_executor::getCommandLine()
 		{
-			std::cout << "> ";
-			std::getline(std::cin, input);
+			std::vector<std::string> tokens;
+			std::string input;
 
-			tokens = utils::ui::splitBySpace(input);
-
-			if (!tokens.empty())
+			while (true)
 			{
-				return tokens;
+				std::cout << "> ";
+				std::getline(std::cin, input);
+
+				tokens = utils::ui::splitBySpace(input);
+
+				if (!tokens.empty())
+				{
+					return tokens;
+				}
 			}
 		}
-	}
-	std::vector<std::string> command_executor::executeCommand(const std::vector<std::string>& tokens, Player& player, Enemy& enemy)
-	{
-		CommandType cmd = convertToCommand(tokens[0]);
-
-		switch (cmd)
+		std::vector<std::string> command_executor::executeCommand(const std::vector<std::string>& tokens, Player& player, Enemy& enemy)
 		{
-		case CommandType::Help:
-			return handleHelp();
+			CommandType cmd = convertToCommand(tokens[0]);
 
-		case CommandType::Show:
-			return handleShow(tokens, player, enemy);
+			switch (cmd)
+			{
+			case CommandType::Help:
+				return handleHelp();
 
-		case CommandType::Use:
-			return handleUse(tokens, player, enemy);
+			case CommandType::Show:
+				return handleShow(tokens, player, enemy);
 
-		case CommandType::Cast:
-			return handleCast(tokens, player, enemy);
+			case CommandType::Use:
+				return handleUse(tokens, player, enemy);
 
-		case CommandType::Consume:
-			return handleConsume(tokens, player, enemy);
+			case CommandType::Cast:
+				return handleCast(tokens, player, enemy);
 
-		case CommandType::DoNothing:
-			return { "Spieler ist erschöpft..." };
+			case CommandType::Consume:
+				return handleConsume(tokens, player, enemy);
 
-		default:
-			return error("Unbekannter Befehl: '" + tokens[0] + "'. \nTipp: benutze 'help'.");
+			case CommandType::DoNothing:
+				return { "Spieler ist erschöpft..." };
+
+			default:
+				return error("Unbekannter Befehl: '" + tokens[0] + "'. \nTipp: benutze 'help'.");
+			}
 		}
 	}
 }

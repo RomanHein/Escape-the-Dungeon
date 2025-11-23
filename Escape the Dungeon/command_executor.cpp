@@ -28,7 +28,9 @@ static const std::unordered_map<std::string, CommandType> COMMAND_MAP = {
 	{"wirke", CommandType::Cast},
 	{"cast", CommandType::Cast},
 	{"beschwöre", CommandType::Cast},
-	{"verbrauche", CommandType::Consume}
+	{"verbrauche", CommandType::Consume},
+	{"nutze", CommandType::Use},
+	{"weiter", CommandType::DoNothing}
 };
 
 //
@@ -277,6 +279,9 @@ namespace services {
 
 		case CommandType::Consume:
 			return handleConsume(tokens, player, enemy);
+
+		case CommandType::DoNothing:
+			return { "Spieler ist erschöpft..." };
 
 		default:
 			return error("Unbekannter Befehl: '" + tokens[0] + "'. \nTipp: benutze 'help'.");

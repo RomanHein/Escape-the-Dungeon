@@ -7,10 +7,10 @@
 
 class Player;
 
-class Goblin : public Enemy
+class Golem : public Enemy
 {
 public:
-	explicit Goblin();
+	explicit Golem();
 
 	std::vector<std::string> makeTurn(Player& player) override;
 };

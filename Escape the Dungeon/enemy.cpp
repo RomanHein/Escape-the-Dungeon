@@ -2,22 +2,34 @@
 
 #include "math_utils.h"
 #include "goblin.h"
+#include "demon.h"
+#include "golem.h"
 
+//
 // === Static Methods ===
+//
 
 std::unique_ptr<Enemy> Enemy::createRandom()
 {
-	switch (utils::math::randomInt(1, 1))
+	switch (utils::math::randomInt(1, 3))
 	{
 	case 1:
 		return std::make_unique<Goblin>();
+
+	case 2:
+		return std::make_unique<Demon>();
+
+	case 3:
+		return std::make_unique<Golem>();
 
 	default:
 		return nullptr;
 	}
 }
 
+//
 // === Constructor & Destructor ===
+//
 
 Enemy::Enemy(
 	const std::string& name, 

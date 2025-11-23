@@ -123,10 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bandage.cpp" />
     <ClCompile Include="battle_ui.cpp" />
     <ClCompile Include="battle_controller.cpp" />
     <ClCompile Include="burning.cpp" />
     <ClCompile Include="consumable.cpp" />
+    <ClCompile Include="dagger.cpp" />
+    <ClCompile Include="demon.cpp" />
     <ClCompile Include="dot.cpp" />
     <ClCompile Include="effect.cpp" />
     <ClCompile Include="enemy.cpp" />
@@ -134,27 +137,34 @@
     <ClCompile Include="fireball.cpp" />
     <ClCompile Include="game_controller.cpp" />
     <ClCompile Include="goblin.cpp" />
+    <ClCompile Include="golem.cpp" />
+    <ClCompile Include="health_potion.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="lifesteal.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_menu_ui_service.cpp" />
     <ClCompile Include="math_utils.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="command_executor.cpp" />
     <ClCompile Include="poisoning.cpp" />
     <ClCompile Include="spell.cpp" />
+    <ClCompile Include="crystal.cpp" />
     <ClCompile Include="stamina_potion.cpp" />
     <ClCompile Include="sword.cpp" />
     <ClCompile Include="ui_utils.cpp" />
     <ClCompile Include="weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bandage.h" />
     <ClInclude Include="battle_ui.h" />
     <ClInclude Include="battle_controller.h" />
     <ClInclude Include="burning.h" />
     <ClInclude Include="command_type.h" />
     <ClInclude Include="consumable.h" />
+    <ClInclude Include="dagger.h" />
     <ClInclude Include="damage_type.h" />
     <ClInclude Include="defense_profile.h" />
+    <ClInclude Include="demon.h" />
     <ClInclude Include="dot.h" />
     <ClInclude Include="effect.h" />
     <ClInclude Include="enemy.h" />
@@ -162,14 +172,18 @@
     <ClInclude Include="fireball.h" />
     <ClInclude Include="game_controller.h" />
     <ClInclude Include="goblin.h" />
+    <ClInclude Include="golem.h" />
+    <ClInclude Include="health_potion.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="item_type.h" />
     <ClInclude Include="lifesteal.h" />
+    <ClInclude Include="main_menu_ui_service.h" />
     <ClInclude Include="math_utils.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="command_executor.h" />
     <ClInclude Include="poisoning.h" />
     <ClInclude Include="spell.h" />
+    <ClInclude Include="crystal.h" />
     <ClInclude Include="stamina_potion.h" />
     <ClInclude Include="sword.h" />
     <ClInclude Include="take_damage_result.h" />

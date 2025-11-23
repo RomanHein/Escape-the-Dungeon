@@ -4,6 +4,8 @@
 #include <cstdlib>
 #include <ctime>
 
+#include "main_menu_ui_service.h"
+
 //
 // === Constructor & Destructor ===
 //
@@ -23,6 +25,8 @@ void GameController::init()
 }
 void GameController::start()
 {
+	services::main_menu_ui::showGameIntro();
+
 	for (int i = 0; i < 3; i++)
 	{
 		bool hasWon = this->battleController_.startBattle();

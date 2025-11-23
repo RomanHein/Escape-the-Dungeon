@@ -171,6 +171,27 @@
     <ClCompile Include="lifesteal.cpp">
       <Filter>Source Files\presets\spells</Filter>
     </ClCompile>
+    <ClCompile Include="health_potion.cpp">
+      <Filter>Source Files\presets\consumables</Filter>
+    </ClCompile>
+    <ClCompile Include="crystal.cpp">
+      <Filter>Source Files\presets\consumables</Filter>
+    </ClCompile>
+    <ClCompile Include="bandage.cpp">
+      <Filter>Source Files\presets\consumables</Filter>
+    </ClCompile>
+    <ClCompile Include="dagger.cpp">
+      <Filter>Source Files\presets\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="demon.cpp">
+      <Filter>Source Files\presets\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="golem.cpp">
+      <Filter>Source Files\presets\enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="main_menu_ui_service.cpp">
+      <Filter>Source Files\services\ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game_controller.h">
@@ -253,6 +274,27 @@
     </ClInclude>
     <ClInclude Include="lifesteal.h">
       <Filter>Header Files\presets\spells</Filter>
+    </ClInclude>
+    <ClInclude Include="health_potion.h">
+      <Filter>Header Files\presets\consumables</Filter>
+    </ClInclude>
+    <ClInclude Include="crystal.h">
+      <Filter>Header Files\presets\consumables</Filter>
+    </ClInclude>
+    <ClInclude Include="bandage.h">
+      <Filter>Header Files\presets\consumables</Filter>
+    </ClInclude>
+    <ClInclude Include="dagger.h">
+      <Filter>Header Files\presets\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="demon.h">
+      <Filter>Header Files\presets\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="golem.h">
+      <Filter>Header Files\presets\enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="main_menu_ui_service.h">
+      <Filter>Header Files\services\ui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

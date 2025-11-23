@@ -6,19 +6,20 @@
 #include "damage_type.h"
 #include "defense_profile.h"
 #include "player.h"
-#include "sword.h"
+#include "dagger.h"
+#include "bandage.h"
 
 Goblin::Goblin() :
 	Enemy(
 		"Goblin", 
-		25.0, 
+		50.0, 
 		50, 
-		0.10, 
+		0.15, 
 		[]()
 		{
 			std::vector<DefenseProfile> profiles;
 
-			profiles.push_back({DamageType::Physical, -0.3});
+			profiles.push_back({DamageType::Fire, -0.5});
 
 			return profiles;
 		}(),
@@ -26,7 +27,8 @@ Goblin::Goblin() :
 		{
 			std::vector<std::unique_ptr<Item>> inventory;
 
-			inventory.push_back(std::make_unique<items::Sword>());
+			inventory.push_back(std::make_unique<items::Dagger>());
+			inventory.push_back(std::make_unique<items::Bandage>());
 
 			return inventory;
 		}()
@@ -35,6 +37,23 @@ Goblin::Goblin() :
 
 std::vector<std::string> Goblin::makeTurn(Player& player)
 {
-	Item* item = this->getItem("schwert");
-	return item->use(*this, player);
+	Item* dagger = this->getItem("dolch");
+
+	if (this->getHealth() / this->getMaxHealth() <= 0.5 && this->hasItem("bandage"))
+	{
+		Item* bandage = this->getItem("bandage");
+
+		auto events = bandage->use(*this, player);
+		this->removeItem("bandage");
+
+		return events;
+	}
+	else if (this->canPerform(dagger->getStaminaCost()))
+	{
+		return dagger->use(*this, player);
+	}
+	else
+	{
+		return { "Goblin ist erschöpft..." };
+	}
 }

@@ -7,6 +7,7 @@ enum class CommandType
 	Help,
 	Unknown,
 	Cast,
-	Consume
+	Consume,
+	DoNothing
 };
 

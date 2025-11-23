@@ -20,6 +20,9 @@ protected:
 	// === Protected Methods ===
 	//
 
+	// Ich hasse diese dumme kacke, es sieht nicht nur kacke aus sondern es ist auch einfach nur kacke.
+	// Kein Bock Structs zu machen weil sonst müsste man 1000 machen ICH HASSE DICH WEAPON HAHWDHHAWHDHAWHDHWAD
+
 	// Deals basic damage to a target, creates a damage event.
 	void dealDamage(Entity& user, Entity& target, std::vector<std::string>& events);
 	// Reduces user's stamina by spell's stamina cost. Creates event.

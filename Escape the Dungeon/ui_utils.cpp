@@ -72,6 +72,13 @@ namespace utils
 			return "Unbekannt";
 		}
 	}
+	std::string ui::centerText(const std::string& text, int width, char filler)
+	{
+		std::string left = std::string((width - text.length()) / 2, filler);
+		std::string right = std::string(width - left.length() - text.length(), filler);
+
+		return left + text + right;
+	}
 	void ui::wait()
 	{
 		std::cout << "Drücke Enter um fortzufahren...";

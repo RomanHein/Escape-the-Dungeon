@@ -7,14 +7,17 @@
 
 class Entity;
 
-namespace items
+namespace game
 {
-	class Crystal : public Consumable
+	namespace items
 	{
-	public:
-		explicit Crystal();
+		class Crystal : public Consumable
+		{
+		public:
+			explicit Crystal();
 
-		std::vector<std::string> use(Entity& user, Entity& target) override;
-		std::string getDescription() override;
-	};
+			std::vector<std::string> use(Entity& user, Entity& target) override;
+			std::string getDescription() override;
+		};
+	}
 }

@@ -7,14 +7,17 @@
 
 class Entity;
 
-namespace items
+namespace game
 {
-	class Bandage : public Consumable
+	namespace items
 	{
-	public:
-		explicit Bandage();
+		class Bandage : public Consumable
+		{
+		public:
+			explicit Bandage();
 
-		std::vector<std::string> use(Entity& user, Entity& target) override;
-		std::string getDescription() override;
-	};
+			std::vector<std::string> use(Entity& user, Entity& target) override;
+			std::string getDescription() override;
+		};
+	}
 }

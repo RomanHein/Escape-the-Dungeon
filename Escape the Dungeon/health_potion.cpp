@@ -3,24 +3,28 @@
 #include "ui_utils.h"
 #include "entity.h"
 
-namespace items
+namespace game
 {
-	HealthPotion::HealthPotion() :
-		Consumable("Heiltrank")
-	{ }
-
-	std::vector<std::string> HealthPotion::use(Entity& user, Entity& target)
+	namespace items
 	{
-		std::vector<std::string> events = { user.getName() + " benutzt " + this->name_ + "..." };
+		HealthPotion::HealthPotion() :
+			Consumable("Heiltrank")
+		{
+		}
 
-		user.heal(60.0);
-		events.push_back(user.getName() + " stellt 60 Lebenspunkte wiederher!");
+		std::vector<std::string> HealthPotion::use(Entity& user, Entity& target)
+		{
+			std::vector<std::string> events = { user.getName() + " benutzt " + this->name_ + "..." };
 
-		return events;
-	}
-	std::string HealthPotion::getDescription()
-	{
-		return this->getBasicDescription()
-			+ "\nEin mächtiger Trank welcher 60 Lebenspunkte wiederherstellen kann.";
+			user.heal(60.0);
+			events.push_back(user.getName() + " stellt 60 Lebenspunkte wiederher!");
+
+			return events;
+		}
+		std::string HealthPotion::getDescription()
+		{
+			return this->getBasicDescription()
+				+ "\nEin mächtiger Trank welcher 60 Lebenspunkte wiederherstellen kann.";
+		}
 	}
 }

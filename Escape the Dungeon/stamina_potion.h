@@ -7,14 +7,17 @@
 
 class Entity;
 
-namespace items 
+namespace game
 {
-	class StaminaPotion : public Consumable
+	namespace items
 	{
-	public:
-		explicit StaminaPotion();
+		class StaminaPotion : public Consumable
+		{
+		public:
+			explicit StaminaPotion();
 
-		std::vector<std::string> use(Entity& user, Entity& target) override;
-		std::string getDescription() override;
-	};
+			std::vector<std::string> use(Entity& user, Entity& target) override;
+			std::string getDescription() override;
+		};
+	}
 }

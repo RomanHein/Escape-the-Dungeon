@@ -28,7 +28,7 @@ Goblin::Goblin() :
 			std::vector<std::unique_ptr<Item>> inventory;
 
 			inventory.push_back(std::make_unique<items::Dagger>());
-			inventory.push_back(std::make_unique<items::Bandage>());
+			inventory.push_back(std::make_unique<game::items::Bandage>());
 
 			return inventory;
 		}()

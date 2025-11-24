@@ -29,11 +29,11 @@ Player::Player() :
 			std::vector<std::unique_ptr<Item>> inventory;
 
 			// Consumables
-			inventory.push_back(std::make_unique<items::HealthPotion>());
-			inventory.push_back(std::make_unique<items::StaminaPotion>());
-			inventory.push_back(std::make_unique<items::Crystal>());
-			inventory.push_back(std::make_unique<items::Crystal>());
-			inventory.push_back(std::make_unique<items::Bandage>());
+			inventory.push_back(std::make_unique<game::items::HealthPotion>());
+			inventory.push_back(std::make_unique<game::items::StaminaPotion>());
+			inventory.push_back(std::make_unique<game::items::Crystal>());
+			inventory.push_back(std::make_unique<game::items::Crystal>());
+			inventory.push_back(std::make_unique<game::items::Bandage>());
 
 			// Weapons
 			inventory.push_back(std::make_unique<items::Dagger>());

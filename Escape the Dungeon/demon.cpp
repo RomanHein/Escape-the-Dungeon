@@ -29,8 +29,8 @@ Demon::Demon() :
 			std::vector<std::unique_ptr<Item>> inventory;
 
 			inventory.push_back(std::make_unique<items::Fireball>());
-			inventory.push_back(std::make_unique<items::Crystal>());
-			inventory.push_back(std::make_unique<items::Crystal>());
+			inventory.push_back(std::make_unique<game::items::Crystal>());
+			inventory.push_back(std::make_unique<game::items::Crystal>());
 
 			return inventory;
 		}()

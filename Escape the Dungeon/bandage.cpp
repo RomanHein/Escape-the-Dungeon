@@ -3,24 +3,28 @@
 #include "ui_utils.h"
 #include "entity.h"
 
-namespace items
+namespace game
 {
-	Bandage::Bandage() :
-		Consumable("Bandage")
-	{ }
-
-	std::vector<std::string> Bandage::use(Entity& user, Entity& target)
+	namespace items
 	{
-		std::vector<std::string> events = { user.getName() + " benutzt " + this->name_ + "..." };
+		Bandage::Bandage() :
+			Consumable("Bandage")
+		{
+		}
 
-		user.heal(20);
-		events.push_back(user.getName() + " stellt 20 Lebenspunkte wiederher!");
+		std::vector<std::string> Bandage::use(Entity& user, Entity& target)
+		{
+			std::vector<std::string> events = { user.getName() + " benutzt " + this->name_ + "..." };
 
-		return events;
-	}
-	std::string Bandage::getDescription()
-	{
-		return this->getBasicDescription()
-			+ "\nEin Kristall welcher 20 Lebenspunkte wiederherstellen kann.";
+			user.heal(20);
+			events.push_back(user.getName() + " stellt 20 Lebenspunkte wiederher!");
+
+			return events;
+		}
+		std::string Bandage::getDescription()
+		{
+			return this->getBasicDescription()
+				+ "\nEin Kristall welcher 20 Lebenspunkte wiederherstellen kann.";
+		}
 	}
 }

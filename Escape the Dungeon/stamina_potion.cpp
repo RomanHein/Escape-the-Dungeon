@@ -3,24 +3,28 @@
 #include "ui_utils.h"
 #include "entity.h"
 
-namespace items
+namespace game
 {
-	StaminaPotion::StaminaPotion() :
-		Consumable("Ausdauertrank")
-	{ }
-
-	std::vector<std::string> StaminaPotion::use(Entity& user, Entity& target)
+	namespace items
 	{
-		std::vector<std::string> events = { user.getName() + " benutzt " + this->name_ + "..." };
+		StaminaPotion::StaminaPotion() :
+			Consumable("Ausdauertrank")
+		{
+		}
 
-		user.restoreStamina(60);
-		events.push_back(user.getName() + " stellt 60 Ausdauer wiederher!");
+		std::vector<std::string> StaminaPotion::use(Entity& user, Entity& target)
+		{
+			std::vector<std::string> events = { user.getName() + " benutzt " + this->name_ + "..." };
 
-		return events;
-	}
-	std::string StaminaPotion::getDescription()
-	{
-		return this->getBasicDescription()
-			+ "\nEin mächtiger Trank welcher 60 Ausdauerpunkte wiederherstellen kann.";
+			user.restoreStamina(60);
+			events.push_back(user.getName() + " stellt 60 Ausdauer wiederher!");
+
+			return events;
+		}
+		std::string StaminaPotion::getDescription()
+		{
+			return this->getBasicDescription()
+				+ "\nEin mächtiger Trank welcher 60 Ausdauerpunkte wiederherstellen kann.";
+		}
 	}
 }

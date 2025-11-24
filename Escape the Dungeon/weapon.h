@@ -15,6 +15,7 @@ private:
 	DamageType damageType_;
 	double critChance_, critDamage_;
 
+
 protected:
 	//
 	// === Protected Methods ===

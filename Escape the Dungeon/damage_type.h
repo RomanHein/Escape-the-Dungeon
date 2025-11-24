@@ -6,6 +6,7 @@ enum class DamageType
 	Fire,
 	Ice,
 	Poison,
-	Dark
+	Dark,
+	Wither
 };
 

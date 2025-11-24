@@ -59,6 +59,9 @@ namespace utils
 		case DamageType::Poison:
 			return "Gift";
 
+		case DamageType::Wither:
+			return "Verdorrung";
+
 		default:
 			return "Unbekannt";
 		}

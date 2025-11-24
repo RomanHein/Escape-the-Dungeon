@@ -14,6 +14,7 @@
 #include "lifesteal.h"
 #include "fireball.h"
 #include "sword.h"
+#include "withered_spear.h"
 
 // === Constructor & Destructor ===
 
@@ -38,6 +39,7 @@ Player::Player() :
 			// Weapons
 			inventory.push_back(std::make_unique<items::Dagger>());
 			inventory.push_back(std::make_unique<items::Sword>());
+			inventory.push_back(std::make_unique<game::items::WitheredSpear>());
 
 			// Spells
 			inventory.push_back(std::make_unique<items::Lifesteal>());

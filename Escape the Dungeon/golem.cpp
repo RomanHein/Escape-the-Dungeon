@@ -19,6 +19,7 @@ Golem::Golem() :
 			std::vector<DefenseProfile> profiles;
 
 			profiles.push_back({ DamageType::Physical, 1.0 });
+			profiles.push_back({ DamageType::Wither, -1.5 });
 
 			return profiles;
 		}(),

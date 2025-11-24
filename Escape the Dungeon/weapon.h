@@ -26,12 +26,14 @@ protected:
 	// Ich hasse diese dumme kacke, es sieht nicht nur kacke aus sondern es ist auch einfach nur kacke.
 	// Kein Bock Structs zu machen weil sonst müsste man 1000 machen ICH HASSE DICH WEAPON HAHWDHHAWHDHAWHDHWAD
 
-	// Deals basic damage to a target, creates a damage event.
-	void dealDamage(Entity& user, Entity& target, std::vector<std::string>& events);
-	// Evaluates damage event.
-	//std::string makeDamageEvent(const HitInfo& info, const Entity& target);
-	// Reduces user's stamina by spell's stamina cost. Creates event.
-	void reduceStamina(Entity& user, std::vector<std::string>& events);
+	// nvm hab's gefixt :)
+
+	// Deals basic weapon damage.
+	HitInfo dealDamage(Entity& target);
+	// Creates an attack event.
+	std::string makeDamageEvent(const HitInfo& info, const Entity& target);
+	// Creates an stamina depletion event.
+	std::string makeStaminaEvent(Entity& user, int lostStamina);
 	// Builds a basic description of a spell.
 	std::string getBasicDescription();
 

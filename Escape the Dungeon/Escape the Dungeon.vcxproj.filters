@@ -31,9 +31,6 @@
     <Filter Include="Source Files\templates">
       <UniqueIdentifier>{1c401eae-ddc7-4335-98cd-defc95cd7c6c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\presets\player">
-      <UniqueIdentifier>{94efbb8c-88f4-4455-a669-3d525bf16b69}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\presets\player">
       <UniqueIdentifier>{8e95ddef-43f9-4397-88bb-4143454fdc6c}</UniqueIdentifier>
     </Filter>
@@ -99,6 +96,9 @@
     </Filter>
     <Filter Include="Source Files\utility">
       <UniqueIdentifier>{254e7171-9b0d-46fd-8906-0e9d6600c1d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\presets\spells\player">
+      <UniqueIdentifier>{94efbb8c-88f4-4455-a669-3d525bf16b69}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +195,12 @@
     <ClCompile Include="golem_fist.cpp">
       <Filter>Source Files\presets\weapons</Filter>
     </ClCompile>
+    <ClCompile Include="withering.cpp">
+      <Filter>Source Files\presets\dots</Filter>
+    </ClCompile>
+    <ClCompile Include="withered_spear.cpp">
+      <Filter>Source Files\presets\weapons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game_controller.h">
@@ -204,7 +210,7 @@
       <Filter>Header Files\templates</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
-      <Filter>Header Files\presets\player</Filter>
+      <Filter>Header Files\presets\spells\player</Filter>
     </ClInclude>
     <ClInclude Include="defense_profile.h">
       <Filter>Header Files\data\pod</Filter>
@@ -303,6 +309,12 @@
       <Filter>Header Files\data\pod</Filter>
     </ClInclude>
     <ClInclude Include="golem_fist.h">
+      <Filter>Header Files\presets\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="withering.h">
+      <Filter>Header Files\presets\dots</Filter>
+    </ClInclude>
+    <ClInclude Include="withered_spear.h">
       <Filter>Header Files\presets\weapons</Filter>
     </ClInclude>
   </ItemGroup>

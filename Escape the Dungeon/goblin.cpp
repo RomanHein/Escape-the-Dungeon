@@ -6,7 +6,7 @@
 #include "damage_type.h"
 #include "defense_profile.h"
 #include "player.h"
-#include "dagger.h"
+#include "sword.h"
 #include "bandage.h"
 
 Goblin::Goblin() :
@@ -27,7 +27,7 @@ Goblin::Goblin() :
 		{
 			std::vector<std::unique_ptr<Item>> inventory;
 
-			inventory.push_back(std::make_unique<items::Dagger>());
+			inventory.push_back(std::make_unique<items::Sword>());
 			inventory.push_back(std::make_unique<game::items::Bandage>());
 
 			return inventory;
@@ -37,7 +37,7 @@ Goblin::Goblin() :
 
 std::vector<std::string> Goblin::makeTurn(Player& player)
 {
-	Item* dagger = this->getItem("dolch");
+	Item* sword = this->getItem("schwert");
 
 	if (this->getHealth() / this->getMaxHealth() <= 0.5 && this->hasItem("bandage"))
 	{
@@ -48,9 +48,9 @@ std::vector<std::string> Goblin::makeTurn(Player& player)
 
 		return events;
 	}
-	else if (this->canPerform(dagger->getStaminaCost()))
+	else if (this->canPerform(sword->getStaminaCost()))
 	{
-		return dagger->use(*this, player);
+		return sword->use(*this, player);
 	}
 	else
 	{

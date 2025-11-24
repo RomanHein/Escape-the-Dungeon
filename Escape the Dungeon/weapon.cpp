@@ -31,29 +31,48 @@ Weapon::Weapon(
 // === Protected Methods ===
 //
 
-void Weapon::dealDamage(Entity& user, Entity& target, std::vector<std::string>& events)
+HitInfo Weapon::dealDamage(Entity& target)
 {
+	if (core::utils::math::randomUnit() < target.getDodgeChance() || core::utils::math::randomUnit() > this->hitChance_)
+	{
+		return { 0.0, 1.0, false, true };
+	}
+
 	bool critical = core::utils::math::randomUnit() < this->critChance_;
 	double damage = this->damage_* (1.0 + critical * this->critDamage_);
 
-	TakeDamageResult result = target.takeDamage(this->damageType_, damage, true);
-	std::string multiplierMessage = (result.multiplier == 1.0 ? "" : (result.multiplier > 1.0 ? " (+" + utils::ui::format((result.multiplier - 1.0) * 100, 0) + "% wegen Schwäche)" : " (" + utils::ui::format((result.multiplier - 1.0) * 100, 0) + "% wegen Immunität)"));
-	std::string criticalHitMessage = (critical ? " (Kritischer Treffer)" : "");
+	TakeDamageResult result = target.takeDamage(this->damageType_, damage, false);
 
-	if (result.dodged)
-	{
-		events.push_back(target.getName() + " ist dem Angriff ausgewichen!");
-	}
-	else
-	{
-		events.push_back(target.getName() + " nahm " + utils::ui::format(result.damage, 2) + " Schaden!" + multiplierMessage + criticalHitMessage);
-	}
+	return { result.damage, result.multiplier, critical, false };
 }
-void Weapon::reduceStamina(Entity& user, std::vector<std::string>& events)
+std::string Weapon::makeDamageEvent(const HitInfo& info, const Entity& target)
 {
-	user.consumeStamina(this->staminaCost_);
+	if (info.dodged)
+	{
+		return target.getName() + " ist dem Angriff ausgewichen!";
+	}
 
-	events.push_back(user.getName() + " verlor " + std::to_string(this->staminaCost_) + "AP.");
+	std::string event = target.getName() + " nahm " + utils::ui::format(info.damage, 2) + " Schaden!";
+
+	if (info.damageMultiplier > 1.0)
+	{
+		event += " (+" + utils::ui::format((info.damageMultiplier - 1.0) * 100, 0) + "% wegen Schwäche)";
+	}
+	else if (info.damageMultiplier < 1.0)
+	{
+		event += " (" + utils::ui::format((info.damageMultiplier - 1.0) * 100, 0) + "% wegen Immunität)";
+	}
+
+	if (info.criticalHit)
+	{
+		event += " (Kritischer Treffer)";
+	}
+
+	return event;
+}
+std::string Weapon::makeStaminaEvent(Entity& user, int lostStamina)
+{
+	return user.getName() + " verlor " + std::to_string(this->staminaCost_) + "AP.";
 }
 std::string Weapon::getBasicDescription()
 {

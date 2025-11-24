@@ -36,9 +36,9 @@ namespace core
 		{
 			utils::ui::clear();
 
+			std::cout << utils::ui::centerText("[ Game Over ]", 60, '-') << "\n";
 			std::cout << "Mit all deiner Kraft hast du gekämpft, aber es reichte nicht.\n";
-			std::cout << "Du wurdest vom Gegner hingerichtet. Du hast tapfer gekämpft.\n";
-			std::cout << "Game Over.\n\n";
+			std::cout << "Du wurdest vom Gegner hingerichtet. Du hast tapfer gekämpft.\n\n";
 
 			utils::ui::wait();
 		}
@@ -47,9 +47,9 @@ namespace core
 		{
 			utils::ui::clear();
 
+			std::cout << utils::ui::centerText("[ Victory ]", 60, '-') << "\n";
 			std::cout << "Du ziehst dein Schwert aus dem Körper des Gegners. Du hast es geschafft...\n";
-			std::cout << "Mit allen Kräften ist es dir gelungen als einziger zurück an die Oberfläche anzukommen...\n";
-			std::cout << "Victory.\n\n";
+			std::cout << "Mit allen Kräften ist es dir gelungen als einziger zurück an die Oberfläche anzukommen...\n\n";
 
 			utils::ui::wait();
 		}

@@ -154,6 +154,8 @@
     <ClCompile Include="sword.cpp" />
     <ClCompile Include="ui_utils.cpp" />
     <ClCompile Include="weapon.cpp" />
+    <ClCompile Include="withered_spear.cpp" />
+    <ClCompile Include="withering.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bandage.h" />
@@ -192,6 +194,8 @@
     <ClInclude Include="take_damage_result.h" />
     <ClInclude Include="ui_utils.h" />
     <ClInclude Include="weapon.h" />
+    <ClInclude Include="withered_spear.h" />
+    <ClInclude Include="withering.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

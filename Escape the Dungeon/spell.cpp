@@ -11,8 +11,7 @@ Spell::Spell(const std::string& name, int staminaCost, double damage, DamageType
 	Item(ItemType::Spell, name, staminaCost),
 	damage_(damage),
 	damageType_(damageType)
-{
-}
+{ }
 
 //
 // === Protected Methods ===
@@ -30,12 +29,19 @@ double Spell::dealDamage(Entity& user, Entity& target, std::vector<std::string>&
 
 	return result.damage;
 }
+
 void Spell::reduceStamina(Entity& user, std::vector<std::string>& events)
 {
 	user.consumeStamina(this->staminaCost_);
 
 	events.push_back(user.getName() + " verlor " + std::to_string(this->staminaCost_) + "AP.");
 }
+
+std::string Spell::makeStaminaEvent(int lostStamina, const Entity& user)
+{
+	return user.getName() + " verlor " + std::to_string(this->staminaCost_) + "AP.";
+}
+
 std::string Spell::getBasicDescription()
 {
 	return

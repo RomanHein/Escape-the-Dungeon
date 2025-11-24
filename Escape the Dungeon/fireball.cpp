@@ -23,7 +23,8 @@ namespace game
 			target.addEffect(std::make_unique<effects::Burning>());
 			events.push_back(target.getName() + " erhielt Verbrennung!");
 
-			this->reduceStamina(user, events);
+			user.consumeStamina(this->staminaCost_);
+			events.push_back(this->makeStaminaEvent(this->staminaCost_, user));
 
 			return events;
 		}

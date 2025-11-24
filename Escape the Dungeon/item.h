@@ -1,3 +1,7 @@
+// item.h
+//
+// Base class for all items in the game.
+
 #pragma once
 
 #include <string>
@@ -28,8 +32,9 @@ public:
 	// === Public Methods ===
 	//
 
-	// Uses the item, returns action events.
+	// Uses the item, returns strings which describe the outcome of the usage.
 	virtual std::vector<std::string> use(Entity& user, Entity& target) = 0;
+
 	// Returns a description of the item.
 	virtual std::string getDescription() = 0;
 

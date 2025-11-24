@@ -18,7 +18,8 @@ namespace items {
 		user.heal(damage * 0.5);
 		events.push_back(user.getName() + " heilte sich um " + utils::ui::format(damage * 0.5, 2) + " LP!");
 
-		this->reduceStamina(user, events);
+		user.consumeStamina(this->staminaCost_);
+		events.push_back(this->makeStaminaEvent(this->staminaCost_, user));
 
 		return events;
 	}

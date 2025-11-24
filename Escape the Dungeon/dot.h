@@ -1,3 +1,7 @@
+// dot.h
+//
+// Base class for all DoTs. DoTs are effects which cause damage over time.
+
 #pragma once
 
 #include <string>
@@ -18,7 +22,7 @@ protected:
 	// === Protected Methods ===
 	//
 
-	// Deals basic damage.
+	// Deals basic damage. Returns string which describes the event.
 	std::string dealDamage(Entity& target);
 
 public:

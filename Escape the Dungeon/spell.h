@@ -28,6 +28,9 @@ protected:
 	// Reduces user's stamina by spell's stamina cost. Creates event.
 	void reduceStamina(Entity& user, std::vector<std::string>& events);
 
+	// Returns a stamina consumption event.
+	std::string makeStaminaEvent(int lostStamina, const Entity& user);
+
 	// Builds a basic description of a spell.
 	std::string getBasicDescription();
 

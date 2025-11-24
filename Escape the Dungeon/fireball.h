@@ -7,15 +7,18 @@
 
 class Entity;
 
-namespace items 
+namespace game
 {
-	class Fireball : public Spell
+	namespace items
 	{
-	public:
-		explicit Fireball();
+		class Fireball : public Spell
+		{
+		public:
+			explicit Fireball();
 
-		std::vector<std::string> use(Entity& user, Entity& target) override;
-		std::string getDescription() override;
-	};
+			std::vector<std::string> use(Entity& user, Entity& target) override;
+			std::string getDescription() override;
+		};
+	}
 }
 

@@ -1,3 +1,7 @@
+// spell.h
+//
+// Base class for all spells in the game
+
 #pragma once
 
 #include <string>
@@ -20,8 +24,10 @@ protected:
 	
 	// Deals basic damage to a target, creates a damage event.
 	double dealDamage(Entity& user, Entity& target, std::vector<std::string>& events);
+
 	// Reduces user's stamina by spell's stamina cost. Creates event.
 	void reduceStamina(Entity& user, std::vector<std::string>& events);
+
 	// Builds a basic description of a spell.
 	std::string getBasicDescription();
 

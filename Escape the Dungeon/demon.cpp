@@ -9,7 +9,11 @@
 #include "fireball.h"
 #include "crystal.h"
 
-Demon::Demon() :
+namespace game
+{
+	namespace entities
+	{
+		Demon::Demon() :
 	Enemy(
 		"Dämon",
 		25.0,
@@ -28,7 +32,7 @@ Demon::Demon() :
 		{
 			std::vector<std::unique_ptr<Item>> inventory;
 
-			inventory.push_back(std::make_unique<items::Fireball>());
+			inventory.push_back(std::make_unique<game::items::Fireball>());
 			inventory.push_back(std::make_unique<game::items::Crystal>());
 			inventory.push_back(std::make_unique<game::items::Crystal>());
 
@@ -58,5 +62,7 @@ std::vector<std::string> Demon::makeTurn(Player& player)
 	else
 	{
 		return { "Dämon ist erschöpft..." };
+	}
+}
 	}
 }

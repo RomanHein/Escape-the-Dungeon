@@ -1,3 +1,8 @@
+// weapon.h
+//
+// Base class for all weapons in the game. Can deal crits but suffers from the additional
+// possibility of missing the target due to extra modifier hit chance.
+
 #pragma once
 
 #include <string>
@@ -30,10 +35,13 @@ protected:
 
 	// Deals basic weapon damage.
 	HitInfo dealDamage(Entity& target);
+
 	// Creates an attack event.
 	std::string makeDamageEvent(const HitInfo& info, const Entity& target);
+
 	// Creates an stamina depletion event.
 	std::string makeStaminaEvent(Entity& user, int lostStamina);
+
 	// Builds a basic description of a spell.
 	std::string getBasicDescription();
 

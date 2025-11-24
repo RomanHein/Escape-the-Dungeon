@@ -62,6 +62,9 @@ namespace utils
 		case DamageType::Wither:
 			return "Verdorrung";
 
+		case DamageType::Dark:
+			return "Dunkel";
+
 		default:
 			return "Unbekannt";
 		}

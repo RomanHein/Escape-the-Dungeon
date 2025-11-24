@@ -17,7 +17,7 @@ std::unique_ptr<Enemy> Enemy::createRandom()
 		return std::make_unique<Goblin>();
 
 	case 2:
-		return std::make_unique<Demon>();
+		return std::make_unique<game::entities::Demon>();
 
 	case 3:
 		return std::make_unique<Golem>();

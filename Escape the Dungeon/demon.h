@@ -7,11 +7,16 @@
 
 class Player;
 
-class Demon : public Enemy
+namespace game
 {
-public:
-	explicit Demon();
+	namespace entities
+	{
+		class Demon : public Enemy
+		{
+		public:
+			explicit Demon();
 
-	std::vector<std::string> makeTurn(Player& player) override;
-};
-
+			std::vector<std::string> makeTurn(Player& player) override;
+		};
+	}
+}

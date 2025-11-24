@@ -45,6 +45,7 @@ HitInfo Weapon::dealDamage(Entity& target)
 
 	return { result.damage, result.multiplier, critical, false };
 }
+
 std::string Weapon::makeDamageEvent(const HitInfo& info, const Entity& target)
 {
 	if (info.dodged)
@@ -52,7 +53,7 @@ std::string Weapon::makeDamageEvent(const HitInfo& info, const Entity& target)
 		return target.getName() + " ist dem Angriff ausgewichen!";
 	}
 
-	std::string event = target.getName() + " nahm " + utils::ui::format(info.damage, 2) + " Schaden!";
+	std::string event = target.getName() + " erhielt " + utils::ui::format(info.damage, 2) + " Schaden!";
 
 	if (info.damageMultiplier > 1.0)
 	{
@@ -70,10 +71,12 @@ std::string Weapon::makeDamageEvent(const HitInfo& info, const Entity& target)
 
 	return event;
 }
+
 std::string Weapon::makeStaminaEvent(Entity& user, int lostStamina)
 {
 	return user.getName() + " verlor " + std::to_string(this->staminaCost_) + "AP.";
 }
+
 std::string Weapon::getBasicDescription()
 {
 	return

@@ -43,7 +43,7 @@ Player::Player() :
 
 			// Spells
 			inventory.push_back(std::make_unique<items::Lifesteal>());
-			inventory.push_back(std::make_unique<items::Fireball>());
+			inventory.push_back(std::make_unique<game::items::Fireball>());
 
 			return inventory;
 		}()

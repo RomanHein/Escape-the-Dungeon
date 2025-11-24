@@ -25,7 +25,7 @@ double Spell::dealDamage(Entity& user, Entity& target, std::vector<std::string>&
 
 	if (result.damage != 0.0)
 	{
-		events.push_back(target.getName() + " nahm " + utils::ui::format(result.damage, 2) + " Schaden!" + multiplierMessage);
+		events.push_back(target.getName() + " erhielt " + utils::ui::format(result.damage, 2) + " Schaden!" + multiplierMessage);
 	}
 
 	return result.damage;

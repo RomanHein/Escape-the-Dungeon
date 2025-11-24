@@ -97,7 +97,7 @@
     <Filter Include="Source Files\utility">
       <UniqueIdentifier>{254e7171-9b0d-46fd-8906-0e9d6600c1d7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\presets\spells\player">
+    <Filter Include="Header Files\presets\player">
       <UniqueIdentifier>{94efbb8c-88f4-4455-a669-3d525bf16b69}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -210,7 +210,7 @@
       <Filter>Header Files\templates</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
-      <Filter>Header Files\presets\spells\player</Filter>
+      <Filter>Header Files\presets\player</Filter>
     </ClInclude>
     <ClInclude Include="defense_profile.h">
       <Filter>Header Files\data\pod</Filter>

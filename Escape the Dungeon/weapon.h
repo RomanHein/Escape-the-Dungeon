@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "damage_type.h"
+#include "hit_info.h"
 #include "item.h"
 
 class Entity;
@@ -14,6 +15,7 @@ private:
 	double damage_;
 	DamageType damageType_;
 	double critChance_, critDamage_;
+	double hitChance_;
 
 
 protected:
@@ -26,6 +28,8 @@ protected:
 
 	// Deals basic damage to a target, creates a damage event.
 	void dealDamage(Entity& user, Entity& target, std::vector<std::string>& events);
+	// Evaluates damage event.
+	//std::string makeDamageEvent(const HitInfo& info, const Entity& target);
 	// Reduces user's stamina by spell's stamina cost. Creates event.
 	void reduceStamina(Entity& user, std::vector<std::string>& events);
 	// Builds a basic description of a spell.
@@ -36,7 +40,15 @@ public:
 	// === Constructor & Destructor ===
 	//
 
-	explicit Weapon(const std::string name, int staminaCost, double damage, DamageType damageType, double critChance, double critDamage);
+	explicit Weapon(
+		const std::string name, 
+		int staminaCost, 
+		double damage, 
+		DamageType damageType, 
+		double critChance, 
+		double critDamage,
+		double hitChance
+	);
 
 	//
 	// === Getters & Setters ===

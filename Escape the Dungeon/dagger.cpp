@@ -7,7 +7,7 @@
 
 namespace items {
 	Dagger::Dagger() :
-		Weapon("Dolch", 10, 15.0, DamageType::Physical, 0.15, 0.50)
+		Weapon("Dolch", 10, 15.0, DamageType::Physical, 0.15, 0.50, 1.0)
 	{ }
 
 	std::vector<std::string> Dagger::use(Entity& user, Entity& target)

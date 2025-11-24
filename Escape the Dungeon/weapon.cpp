@@ -10,12 +10,21 @@
 // === Constructor & Destructor ===
 //
 
-Weapon::Weapon(const std::string name, int staminaCost, double damage, DamageType damageType, double critChance, double critDamage) :
+Weapon::Weapon(
+	const std::string name, 
+	int staminaCost, 
+	double damage, 
+	DamageType damageType, 
+	double critChance, 
+	double critDamage,
+	double hitChance
+) :
 	Item(ItemType::Weapon, name, staminaCost),
 	damage_(damage),
 	damageType_(damageType),
 	critChance_(critChance),
-	critDamage_(critDamage)
+	critDamage_(critDamage),
+	hitChance_(hitChance)
 { }
 
 //

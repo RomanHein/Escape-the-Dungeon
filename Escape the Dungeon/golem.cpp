@@ -6,7 +6,7 @@
 #include "damage_type.h"
 #include "defense_profile.h"
 #include "player.h"
-#include "sword.h"
+#include "golem_fist.h"
 
 Golem::Golem() :
 	Enemy(
@@ -26,7 +26,7 @@ Golem::Golem() :
 		{
 			std::vector<std::unique_ptr<Item>> inventory;
 
-			inventory.push_back(std::make_unique<items::Sword>());
+			inventory.push_back(std::make_unique<game::items::GolemFist>());
 
 			return inventory;
 		}()
@@ -35,11 +35,11 @@ Golem::Golem() :
 
 std::vector<std::string> Golem::makeTurn(Player& player)
 {
-	Item* sword = this->getItem("schwert");
+	Item* golemFist = this->getItem("golem-faust");
 
-	if (this->canPerform(sword->getStaminaCost()))
+	if (this->canPerform(golemFist->getStaminaCost()))
 	{
-		return sword->use(*this, player);
+		return golemFist->use(*this, player);
 	}
 	else
 	{

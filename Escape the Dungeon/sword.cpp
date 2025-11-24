@@ -6,7 +6,7 @@
 
 namespace items {
 	Sword::Sword() :
-		Weapon("Schwert", 10, 15.0, DamageType::Physical, 0.15, 0.50)
+		Weapon("Schwert", 10, 15.0, DamageType::Physical, 0.15, 0.50, 0.9)
 	{ }
 
 	std::vector<std::string> Sword::use(Entity& user, Entity& target)

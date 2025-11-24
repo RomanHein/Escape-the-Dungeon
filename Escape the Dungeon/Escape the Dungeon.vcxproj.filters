@@ -192,6 +192,9 @@
     <ClCompile Include="main_ui_service.cpp">
       <Filter>Source Files\services\ui</Filter>
     </ClCompile>
+    <ClCompile Include="golem_fist.cpp">
+      <Filter>Source Files\presets\weapons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game_controller.h">
@@ -298,6 +301,9 @@
     </ClInclude>
     <ClInclude Include="hit_info.h">
       <Filter>Header Files\data\pod</Filter>
+    </ClInclude>
+    <ClInclude Include="golem_fist.h">
+      <Filter>Header Files\presets\weapons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

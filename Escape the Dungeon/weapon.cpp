@@ -33,7 +33,7 @@ Weapon::Weapon(
 
 HitInfo Weapon::dealDamage(Entity& target)
 {
-	if (core::utils::math::randomUnit() < target.getDodgeChance() || core::utils::math::randomUnit() > this->hitChance_)
+	if (target.getDodgeChance() > 0.0 && this->hitChance_ > 0.0 && (core::utils::math::randomUnit() < target.getDodgeChance() || core::utils::math::randomUnit() > this->hitChance_))
 	{
 		return { 0.0, 1.0, false, true };
 	}

@@ -6,17 +6,18 @@
 
 namespace items {
 	Lifesteal::Lifesteal() :
-		Spell("Lebensraub", 25, 10.0, DamageType::Dark)
+		Spell("Lebensraub", 25, 25.0, DamageType::Dark)
 	{ }
 
 	std::vector<std::string> Lifesteal::use(Entity& user, Entity& target)
 	{
 		std::vector<std::string> events = { user.getName() + " wirkt Lebensraub auf " + target.getName() + "..." };
 
-		double damage = this->dealDamage(user, target, events);
+		HitInfo info = this->dealDamage(target);
+		events.push_back(this->makeDamageEvent(info, target));
 
-		user.heal(damage * 0.5);
-		events.push_back(user.getName() + " heilte sich um " + utils::ui::format(damage * 0.5, 2) + " LP!");
+		user.heal(info.damage * 0.5);
+		events.push_back(user.getName() + " heilte sich um " + utils::ui::format(info.damage * 0.5, 2) + " LP!");
 
 		user.consumeStamina(this->staminaCost_);
 		events.push_back(this->makeStaminaEvent(this->staminaCost_, user));
@@ -26,6 +27,6 @@ namespace items {
 	std::string Lifesteal::getDescription()
 	{
 		return this->getBasicDescription()
-			+ "\nStiehlt 50% des geraubten Lebens eines Gegners.";
+			+ "\nHeilt den Nutzer um 50% des verursachten Schadens.";
 	}
 }

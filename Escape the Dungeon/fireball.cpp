@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "damage_type.h"
+#include "hit_info.h"
 #include "entity.h"
 #include "burning.h"
 
@@ -18,7 +19,8 @@ namespace game
 		{
 			std::vector<std::string> events = { user.getName() + " beschwört Feuerball auf " + target.getName() + "..." };
 
-			this->dealDamage(user, target, events);
+			HitInfo info = this->dealDamage(target);
+			events.push_back(this->makeDamageEvent(info, target));
 
 			target.addEffect(std::make_unique<effects::Burning>());
 			events.push_back(target.getName() + " erhielt Verbrennung!");

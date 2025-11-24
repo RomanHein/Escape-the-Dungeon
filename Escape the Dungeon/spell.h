@@ -7,6 +7,7 @@
 #include <string>
 
 #include "damage_type.h"
+#include "hit_info.h"
 #include "item.h"
 
 class Entity;
@@ -21,9 +22,12 @@ protected:
 	//
 	// === Protected Methods ===
 	//
-	
-	// Deals basic damage to a target, creates a damage event.
-	double dealDamage(Entity& user, Entity& target, std::vector<std::string>& events);
+
+	// Deals basic spell damage.
+	HitInfo dealDamage(Entity& target);
+
+	// Creates an attack event.
+	std::string makeDamageEvent(const HitInfo& info, const Entity& target);
 
 	// Reduces user's stamina by spell's stamina cost. Creates event.
 	void reduceStamina(Entity& user, std::vector<std::string>& events);

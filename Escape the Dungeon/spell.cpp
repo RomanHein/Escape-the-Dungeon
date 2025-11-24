@@ -17,17 +17,32 @@ Spell::Spell(const std::string& name, int staminaCost, double damage, DamageType
 // === Protected Methods ===
 //
 
-double Spell::dealDamage(Entity& user, Entity& target, std::vector<std::string>& events)
+HitInfo Spell::dealDamage(Entity& target)
 {
-	TakeDamageResult result	= target.takeDamage(this->damageType_, this->damage_, false);
-	std::string multiplierMessage = (result.multiplier == 1.0 ? "" : (result.multiplier > 1.0 ? " (+" + utils::ui::format((result.multiplier - 1.0) * 100, 0) + "% wegen Schwäche)" : " (" + utils::ui::format((result.multiplier - 1.0) * 100, 0) + "% wegen Immunität)"));
+	TakeDamageResult result = target.takeDamage(this->damageType_, this->damage_, false);
 
-	if (result.damage != 0.0)
+	return { result.damage, result.multiplier, false, false };
+}
+
+std::string Spell::makeDamageEvent(const HitInfo& info, const Entity& target)
+{
+	std::string event = target.getName() + " erhielt " + utils::ui::format(info.damage, 2) + " Schaden!";
+
+	if (info.damageMultiplier > 1.0)
 	{
-		events.push_back(target.getName() + " erhielt " + utils::ui::format(result.damage, 2) + " Schaden!" + multiplierMessage);
+		event += " (+" + utils::ui::format((info.damageMultiplier - 1.0) * 100, 0) + "% wegen Schwäche)";
+	}
+	else if (info.damageMultiplier < 1.0)
+	{
+		event += " (" + utils::ui::format((info.damageMultiplier - 1.0) * 100, 0) + "% wegen Immunität)";
 	}
 
-	return result.damage;
+	if (info.criticalHit)
+	{
+		event += " (Kritischer Treffer)";
+	}
+
+	return event;
 }
 
 void Spell::reduceStamina(Entity& user, std::vector<std::string>& events)
